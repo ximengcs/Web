@@ -1,0 +1,191 @@
+.method {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: rgb(18, 38, 58);
+}
+
+.method-short-name {
+    font-size: 30px;
+    font-style: solid;
+    margin: 10px;
+    background-color: rgb(64, 50, 189);
+    color: rgb(134, 203, 243);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.method-full-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.full-name-concreate {
+    border-radius: 5%;
+    background-color: rgb(30, 30, 30);
+    color: rgb(201, 212, 177);
+    padding: 5px;
+    margin: 1px;
+    width: max-content;
+    float: left;
+}
+
+.modifier {
+    border-radius: 15%;
+    background-color: rgb(85, 50, 156);
+    color: yellow;
+    padding: 5px;
+    margin: 1px;
+    width: max-content;
+    float: left;
+}
+
+.return-type {
+    border-radius: 15%;
+    background-color: rgb(30, 30, 30);
+    color: rgb(197, 121, 145);
+    padding: 5px;
+    margin: 1px;
+    width: max-content;
+    float: left;
+}
+
+.class-name {
+    float: left;
+}
+
+.param-out{
+    color: rgb(21, 57, 177);
+    float: left;
+}
+
+.param-type {
+    color: rgb(78, 201, 176);
+    float: left;
+}
+
+.param-name {
+    color: rgb(156, 220, 254);
+    float: left;
+}
+
+.comma{
+    color: rgb(246, 252, 255);
+    float: left;
+}
+
+.parameters {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+
+.parameters-name {
+    font-size: 25px;
+    background-color: rgb(55, 55, 121);
+    color: aquamarine;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius: 30px;
+}
+
+.parameters-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.parameters-table td {
+    font-size: 1em;
+    border: 1px solid #b9b9b9;
+    padding: 3px 7px 2px 7px;
+}
+
+.parameters-table tr.alt td {
+    color: #000000;
+    /* background-color:#EAF2D3; */
+}
+
+.parameters-des-cn {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(214, 240, 255);
+}
+
+.parameters-des-en {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(255, 245, 245);
+}
+
+.parameters-defaul-value {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(15, 73, 24);
+    color: aqua;
+    border-radius: 5px;
+}
+
+.description {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.description-content {
+    width: 100%;
+}
+
+.description-name {
+    font-size: 25px;
+    background-color: rgb(55, 55, 121);
+    color: aquamarine;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius: 30px;
+}
+
+.language-chinese {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(37, 37, 38);
+    color: rgb(204, 204, 204);
+    word-wrap: break-word;
+}
+
+.language-english {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(51, 51, 51);
+    color: rgb(133, 133, 133);
+    word-wrap: break-word;
+}
+
+.code {
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(30, 30, 30);
+    color: rgb(220, 220, 170);
+    word-wrap: break-word;
+}

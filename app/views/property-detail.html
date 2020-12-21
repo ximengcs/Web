@@ -1,0 +1,48 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/property-detail-template.css" />
+</head>
+
+<body>
+
+    <div class="property">
+        <div class="property-name">GameObject.layer</div>
+        <div class="property-full-name">
+            <div class="modifier">public</div> 
+            <div class="full-name-concreate">int&nbsp;layer</div>
+        </div>
+    </div>
+
+    <div class="description">
+        <div class="description-name">Description</div>
+        <div class="description-content">
+             
+            <div class="language-chinese">
+                GameObject所在层.
+            </div>
+                 
+            <div class="language-english">
+                The&nbsp;layer&nbsp;the&nbsp;game&nbsp;object&nbsp;is&nbsp;in.
+            </div>
+               
+            <div class="language-chinese">
+                层可用于选择cameras的渲染或者射线的忽略.Unity生成32层。8层及以下不可用。它们被用作特定的游戏原因。层的命名和使用都是在游戏的开发期间。添加层和查看层请点击Unity编辑器右上角的层按钮。
+            </div>
+                 
+            <div class="language-english">
+                Layers&nbsp;can&nbsp;be&nbsp;used&nbsp;for&nbsp;selective&nbsp;rendering&nbsp;from&nbsp;cameras&nbsp;or&nbsp;ignoring&nbsp;raycasts.Unity&nbsp;generates&nbsp;32&nbsp;layers.&nbsp;&nbsp;Layers&nbsp;from&nbsp;8&nbsp;and&nbsp;above&nbsp;are&nbsp;unused.They&nbsp;can&nbsp;be&nbsp;used&nbsp;for&nbsp;specific&nbsp;game&nbsp;reasons.Layers&nbsp;are&nbsp;named&nbsp;and&nbsp;used&nbsp;during&nbsp;the&nbsp;development&nbsp;of&nbsp;the&nbsp;game.Layers&nbsp;are&nbsp;added&nbsp;and&nbsp;viewed&nbsp;by&nbsp;clicking&nbsp;the&nbsp;top-right&nbsp;editor&nbsp;Layout&nbsp;button.
+            </div>
+                 
+            <div class="code">
+                &nbsp;<br>//&nbsp;Put&nbsp;the&nbsp;game&nbsp;object&nbsp;in&nbsp;the&nbsp;ignore&nbsp;raycast&nbsp;layer&nbsp;(2)&nbsp;<br>&nbsp;<br>using&nbsp;UnityEngine;&nbsp;<br>using&nbsp;System.Collections;&nbsp;<br>&nbsp;<br>public&nbsp;class&nbsp;ExampleClass&nbsp;:&nbsp;MonoBehaviour&nbsp;<br>{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;void&nbsp;Example()&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameObject.layer&nbsp;=&nbsp;2;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>}&nbsp;<br>
+            </div>
+             
+        </div>
+    </div>
+
+</body>
+
+</html>

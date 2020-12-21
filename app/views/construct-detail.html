@@ -1,0 +1,56 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/construct-detail-template.css" />
+</head>
+
+<body>
+
+    <div class="construct">
+        <div class="construct-short-name">UnityEngine GameObject</div>
+        <div class="construct-full-name">
+            <div class="modifier">public</div> 
+            <div class="full-name-concreate">
+                <div class="class-name">GameObject(</div> &nbsp;)
+            </div>
+        </div>
+    </div>
+
+    <div class="parameters">
+        <div class="parameters-name">Parameters</div>
+        <table class="parameters-table" border="1px">
+        </table>
+    </div>
+
+    <div class="description">
+        <div class="description-name">Description</div>
+        <div class="description-content">
+             
+            <div class="language-chinese">
+                创建一个新的GameObject,&nbsp;以name为名字。
+            </div>
+                 
+            <div class="language-english">
+                Creates&nbsp;a&nbsp;new&nbsp;game&nbsp;object,&nbsp;named&nbsp;name.
+            </div>
+               
+            <div class="language-chinese">
+                Transform在GameObject被创建的时候添加进去。没有参数的版本创建GameObject时会添加Transform组件，但不会添加其他组件。同样，只有一个字符串作为参数的构造器版本只创建了GameObject和Transform。第三个版本会将传递进来的组件数组添加进创建的GameObject。
+            </div>
+                 
+            <div class="language-english">
+                Transform&nbsp;is&nbsp;always&nbsp;added&nbsp;to&nbsp;the&nbsp;GameObject&nbsp;that&nbsp;is&nbsp;being&nbsp;created.&nbsp;The&nbsp;creation&nbsp;of&nbsp;a&nbsp;GameObject&nbsp;with&nbsp;no&nbsp;script&nbsp;arguments&nbsp;will&nbsp;add&nbsp;the&nbsp;Transform&nbsp;but&nbsp;nothing&nbsp;else.the&nbsp;version&nbsp;with&nbsp;just&nbsp;a&nbsp;single&nbsp;string&nbsp;argument&nbsp;just&nbsp;adds&nbsp;this&nbsp;and&nbsp;the&nbsp;Transform.Finally,&nbsp;the&nbsp;third&nbsp;version&nbsp;allows&nbsp;the&nbsp;name&nbsp;to&nbsp;be&nbsp;specified&nbsp;but&nbsp;also&nbsp;components&nbsp;to&nbsp;be&nbsp;passed&nbsp;in&nbsp;as&nbsp;an&nbsp;array.
+            </div>
+                 
+            <div class="code">
+                &nbsp;<br>using&nbsp;UnityEngine;&nbsp;<br>&nbsp;<br>public&nbsp;class&nbsp;Example&nbsp;:&nbsp;MonoBehaviour&nbsp;<br>{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;void&nbsp;Start()&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GameObject&nbsp;go1&nbsp;=&nbsp;new&nbsp;GameObject();&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;go1.name&nbsp;=&nbsp;"go1";&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;go1.AddComponent<Rigidbody>();&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GameObject&nbsp;go2&nbsp;=&nbsp;new&nbsp;GameObject("go2");&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;go2.AddComponent<Rigidbody>();&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GameObject&nbsp;go3&nbsp;=&nbsp;new&nbsp;GameObject("go3",&nbsp;typeof(Rigidbody),&nbsp;typeof(BoxCollider));&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>}&nbsp;<br>
+            </div>
+             
+        </div>
+    </div>
+
+</body>
+
+</html>

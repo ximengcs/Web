@@ -1,0 +1,250 @@
+.class-name {
+    font-size: 30px;
+    font-style: solid;
+    margin: 10px;
+    background-color: rgb(88, 23, 88);
+    color: rgb(226, 235, 104);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.relation {
+    margin-left: 10px;
+    margin-bottom: 55px;
+}
+
+.relation-namespace{
+    float: left;
+    color: rgb(255, 196, 0);
+    font-size: 15px;
+    padding: 6px;
+    background-color: rgb(51, 48, 12);
+    border-radius: 6px;
+    width: max-content;
+}
+
+.relation-inherit{
+    float: left;
+    color: rgb(41, 218, 6);
+    font-size: 15px;
+    padding: 6px;
+    background-color: rgb(51, 48, 12);
+    border-radius: 6px;
+}
+
+.relation-module{
+float: left;
+    color: rgb(235, 36, 185);
+    font-size: 15px;
+    padding: 6px;
+    background-color: rgb(51, 48, 12);
+    border-radius: 6px;
+}
+
+.description {
+    width: 100%;
+    float: left;
+}
+
+.description-name {
+    font-size: 25px;
+    background-color: rgb(55, 55, 121);
+    color: aquamarine;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius: 30px;
+}
+
+.description-content {
+    width: 100%;
+}
+
+.description-content-cn {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(214, 240, 255);
+}
+
+.description-content-en {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(255, 245, 245);
+}
+
+.property {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: lightslategray;
+}
+
+.property-name {
+    font-size: 25px;
+    background-color: rgb(55, 55, 121);
+    color: aquamarine;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius: 30px;
+}
+
+.property-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.property-table td {
+    font-size: 1em;
+    border: 1px solid #b9b9b9;
+    padding: 3px 7px 2px 7px;
+}
+
+.property-table tr.alt td {
+    color: #000000;
+    /* background-color:#EAF2D3; */
+}
+
+.property-detail:hover {
+    cursor: pointer;
+    background-color: rgb(55, 55, 61);
+    color: rgb(220, 220, 170);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    border-radius: 5px;
+}
+
+.property-detail-operator{
+    background-color: rgb(255, 155, 118);
+    border-radius: 5px;
+}
+
+.property-detail-operator:hover {
+    cursor: pointer;
+    background-color: rgb(55, 55, 61);
+    color: rgb(220, 220, 170);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    border-radius: 5px;
+}
+
+.property-des-cn {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(214, 240, 255);
+}
+
+.property-des-en {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(255, 245, 245);
+}
+
+.modifier {
+    border-radius: 15%;
+    background-color: rgb(85, 50, 156);
+    color: yellow;
+    padding: 5px;
+    margin: 1px;
+    width: max-content;
+}
+
+.construct {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: lightslategray;
+}
+
+.construct-name {
+    font-size: 25px;
+    background-color: rgb(55, 55, 121);
+    color: aquamarine;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius: 30px;
+}
+
+.param-amount{
+    text-align: center;
+}
+
+.param-detail:hover{
+    cursor: pointer;
+    background-color: rgb(53, 23, 41);
+    color: rgb(220, 220, 170);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    border-radius: 5px;
+}
+
+.construct-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.construct-table td {
+    font-size: 1em;
+    border: 1px solid #b9b9b9;
+    padding: 3px 7px 2px 7px;
+}
+
+.construct-table tr.alt td {
+    color: #000000;
+    /* background-color:#EAF2D3; */
+}
+
+.method {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: lightslategray;
+}
+
+.method-name {
+    font-size: 25px;
+    background-color: rgb(55, 55, 121);
+    color: aquamarine;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius: 30px;
+}
+
+.method-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.method-table td {
+    font-size: 1em;
+    border: 1px solid #b9b9b9;
+    padding: 3px 7px 2px 7px;
+}
+
+.method-table tr.alt td {
+    color: #000000;
+    /* background-color:#EAF2D3; */
+}

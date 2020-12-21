@@ -1,0 +1,42 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/property-detail-template.css" />
+</head>
+
+<body>
+
+    <div class="property">
+        <div class="property-name">{{class_name}}.{{property_name}}</div>
+        <div class="property-full-name">
+            {{# each this.modifier}}
+            <div class="modifier">{{this}}</div> {{/each}}
+            <div class="property-type-small">{{property_type}}</div>
+            <div class="property-name-small">{{property_name}}</div>
+        </div>
+    </div>
+
+    <div class="description">
+        <div class="description-name">Description</div>
+        <div class="description-content">
+            {{# each this.detail_description}} {{# if this.language-chinese}}
+            <div class="language-chinese">
+                {{{this.language-chinese}}}
+            </div>
+            {{/if}} {{# if this.language-english}}
+            <div class="language-english">
+                {{{this.language-english}}}
+            </div>
+            {{/if}} {{#if this.code}}
+            <div class="code">
+                {{{this.code}}}
+            </div>
+            {{/if}} {{/each}}
+        </div>
+    </div>
+
+</body>
+
+</html>

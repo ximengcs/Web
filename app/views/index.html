@@ -1,0 +1,50 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unity3D Translate</title>
+
+    <!--图标样式-->
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
+
+    <!--主要样式-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!--内容样式-->
+    <link rel="stylesheet" type="text/css" href="css/content.css" />
+
+    <!--按钮样式-->
+    <!-- <link rel="stylesheet" type="text/css" href="css/button_effect.css" /> -->
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/create-symbol.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
+            $('.tree li.parent_li > span').on('click', function(e) {
+                var children = $(this).parent('li.parent_li').find(' > ul > li');
+                if (children.is(":visible")) {
+                    children.hide('fast');
+                    $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+                } else {
+                    children.show('fast');
+                    $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+                }
+                e.stopPropagation();
+            });
+        });
+    </script>
+
+</head>
+
+<body id="main-body">
+    <div class="big-box">
+        <div class="tree" id="tree"> </div>
+        <div class="content" id="content"></div>
+    </div>
+
+    <script type="text/javascript" src="js/button_effect.js"></script>
+</body>
+
+</html>

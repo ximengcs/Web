@@ -1,0 +1,112 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/method-detail-template.css" />
+</head>
+
+<body>
+
+    <div class="construct">
+        <div class="construct-short-name">GameObject BroadcastMessage</div>
+        <div class="construct-full-name">
+            <div class="modifier">public</div> 
+            <div class="return-type">void</div>
+            <div class="full-name-concreate">
+                <div class="class-name">BroadcastMessage(</div>
+                <div class="param-type">&nbsp;string</div>
+                <div class="param-name">&nbsp;methodName</div>
+                
+                <div class="param-type">&nbsp;object</div>
+                <div class="param-name">&nbsp;parameter</div>
+                
+                <div class="param-type">&nbsp;SendMessageOptions</div>
+                <div class="param-name">&nbsp;options</div>
+                 &nbsp;)
+            </div>
+        </div>
+    </div>
+
+    <div class="parameters">
+        <div class="parameters-name">Parameters</div>
+        <table class="parameters-table" border="1px">
+
+            <tr>
+                <td>string</td>
+                <td>methodName</td>
+                <td>
+                    <div class="parameters-des-cn">
+                        方法名称
+                    </div>
+                    <div class="parameters-des-en">method name</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>object</td>
+                <td>parameter</td>
+                <td>
+                    <div class="parameters-des-cn">
+                        参数
+                    </div>
+                    <div class="parameters-des-en">parameter</div>
+                </td>
+                <td>
+                    <div class="parameters-defaul-value">
+                        Default Value:null
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>SendMessageOptions</td>
+                <td>options</td>
+                <td>
+                    <div class="parameters-des-cn">
+                        选项
+                    </div>
+                    <div class="parameters-des-en">options</div>
+                </td>
+                <td>
+                    <div class="parameters-defaul-value">
+                        Default Value:SendMessageOptions.RequireReceiver
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="description">
+        <div class="description-name">Description</div>
+        <div class="description-content">
+             
+            <div class="language-chinese">
+                在此GameObject及其子对象中的每个MonoBehaviour调用methodName方法
+            </div>
+                 
+            <div class="language-english">
+                Calls&nbsp;the&nbsp;method&nbsp;named&nbsp;methodName&nbsp;on&nbsp;every&nbsp;MonoBehaviour&nbsp;in&nbsp;this&nbsp;game&nbsp;object&nbsp;or&nbsp;any&nbsp;of&nbsp;its&nbsp;children.
+            </div>
+               
+            <div class="language-chinese">
+                接收方法可以没有参数而忽略parameter。如果将options设置在SendMessageOptions.RequireReceiver了，当有一个组件没有执行时都会打印错误信息。
+            </div>
+                 
+            <div class="language-english">
+                The&nbsp;receiving&nbsp;method&nbsp;can&nbsp;choose&nbsp;to&nbsp;ignore&nbsp;parameter&nbsp;by&nbsp;having&nbsp;zero&nbsp;parameters.&nbsp;If&nbsp;options&nbsp;is&nbsp;set&nbsp;to&nbsp;SendMessageOptions.RequireReceiver&nbsp;an&nbsp;error&nbsp;is&nbsp;printed&nbsp;when&nbsp;the&nbsp;message&nbsp;is&nbsp;not&nbsp;picked&nbsp;up&nbsp;by&nbsp;any&nbsp;component.
+            </div>
+                 
+            <div class="code">
+                &nbsp;<br>using&nbsp;UnityEngine;&nbsp;<br>&nbsp;<br>public&nbsp;class&nbsp;Example&nbsp;:&nbsp;MonoBehaviour&nbsp;<br>{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;void&nbsp;Start()&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Calls&nbsp;the&nbsp;function&nbsp;ApplyDamage&nbsp;with&nbsp;a&nbsp;value&nbsp;of&nbsp;5&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;//&nbsp;Every&nbsp;script&nbsp;attached&nbsp;to&nbsp;the&nbsp;game&nbsp;object&nbsp;and&nbsp;all&nbsp;its&nbsp;children&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;that&nbsp;has&nbsp;a&nbsp;ApplyDamage&nbsp;function&nbsp;will&nbsp;be&nbsp;called.&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameObject.BroadcastMessage("ApplyDamage",&nbsp;5.0);&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>}&nbsp;<br>&nbsp;<br>&nbsp;<br>public&nbsp;class&nbsp;Example2&nbsp;:&nbsp;MonoBehaviour&nbsp;<br>{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;void&nbsp;ApplyDamage(float&nbsp;damage)&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(damage);&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<br>}&nbsp;<br>
+            </div>
+             
+        </div>
+    </div>
+
+</body>
+
+</html>

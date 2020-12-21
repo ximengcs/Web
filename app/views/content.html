@@ -1,0 +1,392 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/content_template.css" />
+</head>
+
+<body>
+
+    <div class="class-name">GameObject</div>
+    <div class="relation">relation</div>
+
+    <div class="description">
+        <div class="description-name">Description</div>
+        <div class="description-content">
+            <div class="description-content-cn">
+                 Unity场景(Scenes)中所有实体(独立存在)的基类。  注：在GameObject类中许多变量已经被移除了，比如C#中GameObject.renderer，它现在用GetComponent&lt;Renderer&gt;()来代替。  请参阅:Component. 
+            </div>
+            <div class="description-content-en">
+                 Base class for all entities in Unity Scenes.  Note: Many variables in the GameObject class have been removed. To access, for example GameObject.renderer in csharp use GetComponent&lt;Renderer&gt;() instead.  See Also: Component. 
+            </div>
+        </div>
+    </div>
+
+    <div class="property">
+        <div class="property-name">Properties</div>
+        <table class="property-table" border="1px">
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="propertyDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|activeInHierarchy|bool</p>activeInHierarchy</td>
+                <td>bool</td>
+                <td>
+                    <div class="property-des-cn">定义该GameObject在场景(Scene)中是否为活动状态(active).</div>
+                    <div class="property-des-en">Defines whether the GameObject is active in the Scene.</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="propertyDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|activeSelf|bool</p>activeSelf</td>
+                <td>bool</td>
+                <td>
+                    <div class="property-des-cn">该GameObject的本地激活状态(只读字段)</div>
+                    <div class="property-des-en">The local active state of this GameObject. (Read Only)</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="propertyDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|isStatic|bool</p>isStatic</td>
+                <td>bool</td>
+                <td>
+                    <div class="property-des-cn">读取或者写入GameObject的StaticEditorFlags.</div>
+                    <div class="property-des-en">Gets and sets the GameObject&#x27;s StaticEditorFlags.</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="propertyDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|layer|int</p>layer</td>
+                <td>int</td>
+                <td>
+                    <div class="property-des-cn">GameObject所在层.</div>
+                    <div class="property-des-en">The layer the game object is in.</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="propertyDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|scene|SceneManagement.Scene</p>scene</td>
+                <td>SceneManagement.Scene</td>
+                <td>
+                    <div class="property-des-cn">GameObject所在场景(Scene)</div>
+                    <div class="property-des-en">Scene that the GameObject is part of.</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="propertyDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|sceneCullingMask|ulong</p>sceneCullingMask</td>
+                <td>ulong</td>
+                <td>
+                    <div class="property-des-cn">去除层（Unity用于确定渲染游戏对象的场景层）的场景。</div>
+                    <div class="property-des-en">Scene culling mask Unity uses to determine which scene to render the GameObject in.</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="propertyDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|tag|string</p>tag</td>
+                <td>string</td>
+                <td>
+                    <div class="property-des-cn">游戏对象所在标签。</div>
+                    <div class="property-des-en">The tag of this game object.</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="propertyDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|transform|Transform</p>transform</td>
+                <td>Transform</td>
+                <td>
+                    <div class="property-des-cn">GameObject的Transform组件。</div>
+                    <div class="property-des-en">The Transform attached to this GameObject.</div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="construct">
+        <div class="construct-name">Constructor</div>
+        <table class="construct-table" border="1px">
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="constructDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|0| 
+                    </p>GameObject</td>
+                <td>
+                    <div class="description-content-cn">
+                         创建一个新的GameObject, 以name为名字。 
+                    </div>
+                    <div class="description-content-en">
+                         Creates a new game object, named name. 
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="constructDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|1|  string* 
+                    </p>GameObject</td>
+                <td>
+                    <div class="description-content-cn">
+                         创建一个新的GameObject, 以name为名字。 
+                    </div>
+                    <div class="description-content-en">
+                         Creates a new game object, named name. 
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div> 
+                </td>
+                <td class="property-detail" onclick="constructDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|2|  string*  params Type[]* 
+                    </p>GameObject</td>
+                <td>
+                    <div class="description-content-cn">
+                         创建一个新的GameObject, 以name为名字。 
+                    </div>
+                    <div class="description-content-en">
+                         Creates a new game object, named name. 
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="method">
+        <div class="method-name">Method</div>
+        <table class="method-table" border="1px">
+            <tr>
+                <td>
+                    <div class="modifier">Obsolete</div>
+                    <div class="modifier">public</div>
+                </td>
+                <td>Component</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|AddComponent|1|  string* 
+                    </p>AddComponent</td>
+                <td>
+                    <div class="description-content-cn">
+                         将以className命名的组件添加进GameObject 
+                    </div>
+                    <div class="description-content-en">
+                         Adds a component class named className to the game object. 
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div>
+                </td>
+                <td>Component</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|AddComponent|1|  Type* 
+                    </p>AddComponent</td>
+                <td>
+                    <div class="description-content-cn">
+                         添加类型为Type的组件componentType到GameObject中。C#使用的通用版本。 
+                    </div>
+                    <div class="description-content-en">
+                         Adds a component class of type componentType to the game object. C# Users can use a generic version. 
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div>
+                </td>
+                <td>T</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|AddComponent|0| 
+                    </p>AddComponent</td>
+                <td>
+                    <div class="description-content-cn">
+                         AddComponent的通用版本 
+                    </div>
+                    <div class="description-content-en">
+                         Generic version of this method. 
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div>
+                </td>
+                <td>void</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|BroadcastMessage|3|  string*  object*  SendMessageOptions* 
+                    </p>BroadcastMessage</td>
+                <td>
+                    <div class="description-content-cn">
+                         在此GameObject及其子对象中的每个MonoBehaviour调用methodName方法 
+                    </div>
+                    <div class="description-content-en">
+                         Calls the method named methodName on every MonoBehaviour in this game object or any of its children. 
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div>
+                </td>
+                <td>bool</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|CompareTag|1|  string* 
+                    </p>CompareTag</td>
+                <td>
+                    <div class="description-content-cn">
+                         GameObject使用的标签是tag吗？ 
+                    </div>
+                    <div class="description-content-en">
+                         Is this game object tagged with tag ? 
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div>
+                </td>
+                <td>Component</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|GetComponent|1|  Type* 
+                    </p>GetComponent</td>
+                <td>
+                    <div class="description-content-cn">
+                         如果有一个Type类型的组件挂在GameObject上，则返回它，没有则返回null 
+                    </div>
+                    <div class="description-content-en">
+                         Returns the component of Type type if the game object has one attached, null if it doesn&#x27;t. 
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div>
+                </td>
+                <td>T</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|GetComponent|0| 
+                    </p>GetComponent</td>
+                <td>
+                    <div class="description-content-cn">
+                         通用版本。 
+                    </div>
+                    <div class="description-content-en">
+                         Generic version of this method. 
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div>
+                </td>
+                <td>Component</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|GetComponent|1|  string* 
+                    </p>GetComponent</td>
+                <td>
+                    <div class="description-content-cn">
+                         如果有一个Type类型的组件挂在GameObject上，则返回它，没有则返回null 
+                    </div>
+                    <div class="description-content-en">
+                         Returns the component of Type type if the game object has one attached, null if it doesn&#x27;t. 
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div>
+                </td>
+                <td>Component</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|GetComponentInChildren|1|  Type* 
+                    </p>GetComponentInChildren</td>
+                <td>
+                    <div class="description-content-cn">
+                         如果找到，返回所匹配的组件  使用深度优先搜索在GameObject以及子对象中查找类型为type的组件。 
+                    </div>
+                    <div class="description-content-en">
+                         return value Component A component of the matching type, if found.  Returns the component of Type type in the GameObject or any of its children using depth first search. 
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="modifier">public</div>
+                </td>
+                <td>T</td>
+                <td class="property-detail" onclick="methodDetail(this)">
+                    <p hidden>UnityEngine|GameObject|Class|GetComponentInChildren|1|  bool* 
+                    </p>GetComponentInChildren</td>
+                <td>
+                    <div class="description-content-cn">
+                         如果找到，返回所匹配的组件  通用版本 
+                    </div>
+                    <div class="description-content-en">
+                         return value Component A component of the matching type, if found.  Generic version of this method. 
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>

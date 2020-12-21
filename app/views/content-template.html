@@ -1,0 +1,195 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/content_template.css" />
+</head>
+
+<body>
+
+    <div class="class-name">{{class_name}}</div>
+    <div class="relation">
+        <div class="relation-namespace">
+            {{relation.type}} in {{relation.namespace}}
+        </div>
+        <div class="relation-inherit">
+            Inherits from {{relation.parent_class_name}}
+        </div>
+        <div class="relation-module">
+            Implemented in {{relation.implemented_name}}
+        </div>
+    </div>
+
+    <div class="description">
+        <div class="description-name">Description</div>
+        <div class="description-content">
+            <div class="description-content-cn">
+                {{# each description.cn}} {{this}} {{/each}}
+            </div>
+            <div class="description-content-en">
+                {{# each description.en}} {{this}} {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <div class="property">
+        <div class="property-name">Properties</div>
+        <table class="property-table" border="1px">
+            {{# each propertyList}}
+
+            <tr>
+                <td>
+                    {{# each this.modifier}}
+                    <div class="modifier">{{this}}</div> {{/each}}
+                </td>
+                <td>{{this.property_type}}</td>
+                <td class="property-detail" onclick="propertyDetail(this)">
+                    <p hidden>{{namespace}}|{{class_name}}|{{type}}|{{this.property_name}}|{{this.property_type}}</p>
+                    {{this.property_name}}
+                </td>
+                <td>
+                    <div class="property-des-cn">{{this.description.cn}}</div>
+                    <div class="property-des-en">{{this.description.en}}</div>
+                </td>
+            </tr>
+
+            {{/each}}
+        </table>
+    </div>
+
+    <div class="construct">
+        <div class="construct-name">Constructor</div>
+        <table class="construct-table" border="1px">
+            {{# each constructList}}
+
+            <tr>
+                <td>
+                    {{# each this.modifier}}
+                    <div class="modifier">{{this}}</div> {{/each}}
+                </td>
+                <td class="property-detail" onclick="constructDetail(this)">
+                    <p hidden>{{namespace}}|{{class_name}}|{{type}}|{{this.param_amount}}| {{# each this.param}}
+                        {{this.paramType}}* {{/each}}
+                    </p>{{this.class_name}}
+                </td>
+                <td class="param-detail"><div class="param-amount">{{param_amount}}</div></td>
+                <td>
+                    <div class="description-content-cn">
+                        {{# each this.description.cn}} {{this}} {{/each}}
+                    </div>
+                    <div class="description-content-en">
+                        {{# each this.description.en}} {{this}} {{/each}}
+                    </div>
+                </td>
+            </tr>
+
+            {{/each}}
+        </table>
+    </div>
+
+    <div class="method">
+        <div class="method-name">Method</div>
+        <table class="method-table" border="1px">
+            {{# each methodList}}
+            <tr>
+                <td>
+                    {{# each this.modifier}}
+                    <div class="modifier">{{this}}</div>
+                    {{/each}}
+                </td>
+                <td>{{this.return_type}}</td>
+                {{#if this.operator}}
+                    <td class="property-detail-operator" onclick="methodDetail(this)">
+                        <p hidden>{{namespace}}|{{class_name}}|{{type}}|{{this.method_name}}|{{this.param_amount}}|{{# each this.param}}{{this.paramType}}*{{/each}}
+                        </p>{{this.method_name}}
+                    </td>
+                    {{else}}
+                    <td class="property-detail" onclick="methodDetail(this)">
+                        <p hidden>{{namespace}}|{{class_name}}|{{type}}|{{this.method_name}}|{{this.param_amount}}|{{# each this.param}}{{this.paramType}}*{{/each}}
+                        </p>{{this.method_name}}
+                    </td>
+                    {{/if}}
+                    <td class="param-detail"><div class="param-amount">{{param_amount}}</div></td>
+                <td>
+                    <div class="description-content-cn">
+                        {{# each this.description.cn}} {{this}} {{/each}}
+                    </div>
+                    <div class="description-content-en">
+                        {{# each this.description.en}} {{this}} {{/each}}
+                    </div>
+                </td>
+            </tr>
+
+            {{/each}}
+        </table>
+    </div>
+
+    {{#if parent}}
+    <div class="parent-content">
+
+        <div class="property">
+            <div class="property-name">Inherit Properties</div>
+            <table class="property-table" border="1px">
+                {{# each parent.propertyList}}
+
+                <tr>
+                    <td>
+                        {{# each this.modifier}}
+                        <div class="modifier">{{this}}</div> {{/each}}
+                    </td>
+                    <td>{{this.property_type}}</td>
+                    <td class="property-detail" onclick="propertyDetail(this)">
+                        <p hidden>{{namespace}}|{{class_name}}|{{type}}|{{this.property_name}}|{{this.property_type}}</p>{{this.property_name}}
+                    </td>
+                    <td>
+                        <div class="property-des-cn">{{this.description.cn}}</div>
+                        <div class="property-des-en">{{this.description.en}}</div>
+                    </td>
+                </tr>
+
+                {{/each}}
+            </table>
+        </div>
+
+        <div class="method">
+            <div class="method-name">Inherit Method</div>
+            <table class="method-table" border="1px">
+                {{# each parent.methodList}}
+                <tr>
+                    <td>
+                        {{# each this.modifier}}
+                        <div class="modifier">{{this}}</div>
+                        {{/each}}
+                    </td>
+                    <td>{{this.return_type}}</td>
+                    {{#if this.operator}}
+                    <td class="property-detail-operator" onclick="methodDetail(this)">
+                        <p hidden>{{namespace}}|{{class_name}}|{{type}}|{{this.method_name}}|{{this.param_amount}}|{{# each this.param}}{{this.paramType}}*{{/each}}
+                        </p>{{this.method_name}}
+                    </td>
+                    {{else}}
+                    <td class="property-detail" onclick="methodDetail(this)">
+                        <p hidden>{{namespace}}|{{class_name}}|{{type}}|{{this.method_name}}|{{this.param_amount}}|{{# each this.param}}{{this.paramType}}*{{/each}}
+                        </p>{{this.method_name}}
+                    </td>
+                    {{/if}}
+                    <td class="param-detail"><div class="param-amount">{{param_amount}}</div></td>
+                    <td>
+                        <div class="description-content-cn">
+                            {{# each this.description.cn}} {{this}} {{/each}}
+                        </div>
+                        <div class="description-content-en">
+                            {{# each this.description.en}} {{this}} {{/each}}
+                        </div>
+                    </td>
+                </tr>
+
+                {{/each}}
+            </table>
+        </div>
+    </div>
+    {{/if}}
+</body>
+
+</html>

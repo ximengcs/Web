@@ -1,0 +1,71 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/construct-detail-template.css" />
+</head>
+
+<body>
+
+    <div class="construct">
+        <div class="construct-short-name">{{namespace}} {{class_name}}</div>
+        <div class="construct-full-name">
+            {{# each this.modifier}}
+            <div class="modifier">{{this}}</div> {{/each}}
+            <div class="full-name-concreate">
+                <div class="class-name">{{this.class_name}}(</div>{{# each this.param}}
+                <div class="param-type">&nbsp;{{paramType}}</div>
+                <div class="param-name">&nbsp;{{paramName}}</div>
+                <div class="comma">
+                    {{#comma @index this/../param_amount}}
+                    {{/comma}}
+                </div>
+                
+                {{/each}} &nbsp;)
+            </div>
+        </div>
+    </div>
+
+    <div class="parameters">
+        <div class="parameters-name">Parameters</div>
+        <table class="parameters-table" border="1px">
+            {{# each param}}
+
+            <tr>
+                <td>{{this.paramType}}</td>
+                <td>{{this.paramName}}</td>
+                <td>
+                    <div class="parameters-des-cn">
+                        {{this.paramDescription.cn}}
+                    </div>
+                    <div class="parameters-des-en">{{this.paramDescription.en}}</div>
+                </td>
+            </tr>
+
+            {{/each}}
+        </table>
+    </div>
+
+    <div class="description">
+        <div class="description-name">Description</div>
+        <div class="description-content">
+            {{# each this.detail_description}} {{# if this.language-chinese}}
+            <div class="language-chinese">
+                {{{this.language-chinese}}}
+            </div>
+            {{/if}} {{# if this.language-english}}
+            <div class="language-english">
+                {{{this.language-english}}}
+            </div>
+            {{/if}} {{#if this.code}}
+            <div class="code">
+                {{{this.code}}}
+            </div>
+            {{/if}} {{/each}}
+        </div>
+    </div>
+
+</body>
+
+</html>

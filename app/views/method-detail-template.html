@@ -1,0 +1,81 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/method-detail-template.css" />
+</head>
+
+<body>
+
+    <div class="method">
+        <div class="method-short-name">{{class_name}} {{method_name}}</div>
+        <div class="method-full-name">
+            {{# each this.modifier}}
+            <div class="modifier">{{this}}</div> {{/each}}
+            <div class="return-type">{{this.return_type}}</div>
+            <div class="full-name-concreate">
+                <div class="class-name">{{this.method_name}}(</div>{{# each this.param}}
+                {{# if this.paramOut}}
+                <div class="param-out">&nbsp;{{paramOut}}</div>
+                {{/if}}
+                <div class="param-type">&nbsp;{{paramType}}</div>
+                <div class="param-name">&nbsp;{{paramName}}</div>
+                <div class="comma">
+                    {{#comma @index this/../param_amount}}
+                    {{/comma}}
+                </div>
+                {{/each}} &nbsp;)
+            </div>
+        </div>
+    </div>
+
+    <div class="parameters">
+        <div class="parameters-name">Parameters</div>
+        <table class="parameters-table" border="1px">
+            {{# each param}}
+
+            <tr>
+                <td>{{this.paramType}}</td>
+                <td>{{this.paramName}}</td>
+                <td>
+                    <div class="parameters-des-cn">
+                        {{this.paramDescription.cn}}
+                    </div>
+                    <div class="parameters-des-en">{{this.paramDescription.en}}</div>
+                </td>
+                {{#if this.paramDefaultValue}}
+                <td>
+                    <div class="parameters-defaul-value">
+                        Default Value:{{this.paramDefaultValue}}
+                    </div>
+                </td>
+                {{/if}}
+            </tr>
+
+            {{/each}}
+        </table>
+    </div>
+
+    <div class="description">
+        <div class="description-name">Description</div>
+        <div class="description-content">
+            {{# each this.detail_description}} {{# if this.language-chinese}}
+            <div class="language-chinese">
+                {{{this.language-chinese}}}
+            </div>
+            {{/if}} {{# if this.language-english}}
+            <div class="language-english">
+                {{{this.language-english}}}
+            </div>
+            {{/if}} {{#if this.code}}
+            <div class="code">
+                {{{this.code}}}
+            </div>
+            {{/if}} {{/each}}
+        </div>
+    </div>
+
+</body>
+
+</html>

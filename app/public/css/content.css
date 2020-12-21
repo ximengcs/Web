@@ -1,0 +1,15 @@
+.content {
+    width: 70%;
+    background-color: #f3fafc;
+    border: 1px solid #999;
+    float: right;
+    margin-right: 1%;
+    margin-top: 20px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    /*圆角*/
+}
+
+.big-box {
+    width: 100%;
+}
